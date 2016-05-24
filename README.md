@@ -1,2 +1,3 @@
-# sublime-nav-panel
-Nav Panel plugin for Sublime Text 3
+# Nav Panel
+
+Shows a quick panel to open files withing the current directory, inspired on vim's netrw.
