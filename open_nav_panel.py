@@ -38,13 +38,23 @@ class OpenNavPanelCommand(sublime_plugin.TextCommand):
         options = ["../"]
         files = []
         dirs = []
+        show_hidden = self.settings().get("show_hidden_files", False)
 
         for entry in os.listdir(path):
+
+            # Do not append hidden files based on the settings.
+            # This only works for Unix-like systems, I don't care about Windows.
+            if not show_hidden and entry.startswith("."):
+                continue
+
             if os.path.isfile(os.path.join(path, entry)):
                 files.append(entry)
             else:
                 dirs.append(entry + "/")
 
         return options + dirs + files
+
+    def settings(self):
+        return sublime.load_settings("NavPanel.sublime-settings")
 
 

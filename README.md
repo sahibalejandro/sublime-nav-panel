@@ -12,3 +12,10 @@ It's usefull when you want to quickly open files within the current buffer's dir
     {"keys": ["super+up"], "command": "open_nav_panel"},
 ]
 ```
+
+## Default settings
+```
+{
+    "show_hidden_files": false
+}
+```

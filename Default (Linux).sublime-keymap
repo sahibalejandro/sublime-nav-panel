@@ -1,0 +1,3 @@
+[
+    {"keys": ["ctrl+up"], "command": "open_nav_panel"},
+]
