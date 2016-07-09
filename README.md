@@ -6,10 +6,20 @@ Inspired on vim's netrw, shows a quick panel to open files within the current di
 
 It's usefull when you want to quickly open files within the current buffer's directory, also you can navigate on directories without opening the side bar.
 
-## Default key mapping
+## Key mappings
+
+### Windows and Linux
 ```
 [
-    {"keys": ["super+up"], "command": "open_nav_panel"},
+    {"keys": ["ctrl+alt+p"], "command": "open_nav_panel"},
+]
+```
+
+### macOS
+If you often use the `show_scope_name` command (`super+alt+p`) you should use another key mappig.
+```
+[
+    {"keys": ["super+alt+p"], "command": "open_nav_panel"},
 ]
 ```
 
