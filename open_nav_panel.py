@@ -4,7 +4,10 @@ import os
 class OpenNavPanelCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         # Show files and folders within the current path.
-        self.show(os.path.dirname(self.view.file_name()))
+        file_name = self.view.file_name()
+
+        if file_name is not None:
+            self.show(os.path.dirname(file_name))
 
     def show(self, path):
         # Set the current path and options to display on the quick panel
